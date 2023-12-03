@@ -19,7 +19,7 @@ for line_id in range(0, len(Lines)):
     for (start, number_str) in indices:
         lst_numbers[line_id][start] = number_str
 
-    # find points
+    # find signs
     indices = [(m.start(), m.group()) for m in re.finditer(r'[^0-9.]', line)]
     for (i, sign) in indices:
         lst_signs[line_id][i] = sign
